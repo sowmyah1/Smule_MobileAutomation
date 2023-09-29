@@ -1,0 +1,18 @@
+{
+  "platformName": "Android",
+
+  "appium:platformVersion": "14",
+
+
+  "appium:deviceName": "Pixel 6",
+
+
+  "appium:app": "/Users/testvgrant/Downloads/smule-11-2-1.apk",
+
+
+  "appium:automationName": "UiAutomator2",
+
+
+  "appium:udid": "emulator-5554"
+
+}
