@@ -1,5 +1,6 @@
 package smule;
 
+import mobile.pages.Activity.ActivityScreen;
 import mobile.pages.Feed.FeedScreen;
 import mobile.pages.Login.LoginScreen;
 import mobile.pages.Login.LoginScroll;
@@ -56,6 +57,19 @@ public class SmuleTest extends BaseTest {
 
         Assert.assertTrue(searchScreen.isSearchItemDisplayed(), "Search Item not found");
 
+    }
+    @Test
+    void ActivityTest(){
+        testLogin();
+        ActivityScreen activityScreen = new ActivityScreen();
+        activityScreen.clickOnActivity();
+        Assert.assertTrue(activityScreen.isInvitesDisplayed(),"Invites not displayed");
+
+        activityScreen.clickOnNotification();
+        Assert.assertTrue(activityScreen.isNotificationDisplayed(),"Notifications not displayed");
+
+        activityScreen.clickOnNews();
+        Assert.assertTrue(activityScreen.isNewsDisplayed(),"News not displayed");
     }
 }
 
