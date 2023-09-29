@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class SmuleTest extends BaseTest {
 
-    @Test
+    @Test(groups = "sanity")
     public void testLogin() {
         LoginScroll scroll = new LoginScroll();
         LoginScreen login = new LoginScreen();
@@ -25,7 +25,7 @@ public class SmuleTest extends BaseTest {
 
     }
 
-    @Test
+    @Test(groups = "sanity")
     void messageTest() {
         testLogin();
         MessageScreen screenAction = new MessageScreen();
@@ -39,7 +39,7 @@ public class SmuleTest extends BaseTest {
 
     }
 
-    @Test
+    @Test(groups = "sanity")
     void FeedTest() {
         testLogin();
         FeedScreen feedScreen = new FeedScreen();
@@ -48,7 +48,7 @@ public class SmuleTest extends BaseTest {
         Assert.assertTrue(feedScreen.isDisplay(), "Feed not accessible");
     }
 
-    @Test
+    @Test(groups = "sanity")
     void SearchTest() {
         testLogin();
         SearchScreen searchScreen = new SearchScreen();
@@ -58,7 +58,7 @@ public class SmuleTest extends BaseTest {
         Assert.assertTrue(searchScreen.isSearchItemDisplayed(), "Search Item not found");
 
     }
-    @Test
+    @Test(groups = "sanity")
     void ActivityTest(){
         testLogin();
         ActivityScreen activityScreen = new ActivityScreen();
